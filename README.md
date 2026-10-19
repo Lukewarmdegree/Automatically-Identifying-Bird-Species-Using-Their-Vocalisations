@@ -1,5 +1,5 @@
 # Automatically-Identifying-Bird-Species-Using-Their-Vocalisations
-This is the training pipeline for classifying the 264 bird species of the BirdCLEF 2023 Kaggle competition from 5-second audio chunks, using ImageNet-pretrained CNNs on log-mel spectrograms
+This is the training pipeline for classifying the 264 bird species of the BirdCLEF 2023 Kaggle competition from 5-second audio chunks, using ImageNet-pretrained CNNs on log-mel spectrograms.
 
 Recordings are split 80/20 at the file level (fixed seed, independent of the run seed), then sliced into 5s chunks with 50% overlap for training, none for validation. Chunk offsets are indexed once and cached, and the audio is read lazily by seeking into each file using SoundFile.
 
