@@ -20,3 +20,13 @@ python experiments.py --run baseline (this runs a ResNet-18 without any augmenta
 python experiments.py --run gauss_only --set p_gauss=0.5 p_gain=0.0 p_shift=0.0 (--set is used to set a value for the specified parameter. p=0 means the augmentation is turned off. Any other number indicates the probability of that augmentation being applied, and hence switches it on for that experiment.)
 
 python experiments.py --run loo_mixup --from work/full_stack_config.json --set p_mixup=0.0 (--from starts an experiment from a configuration saved as a JSON file. This makes it easier to stack augmentations on top of each other or remove augmentations from a stack.)
+
+Parameters that can be set:
+
+| Group | Fields |
+|---|---|
+| Audio | `sr`, `chunk_secs`, `train_overlap` (stride as a fraction of chunk length) |
+| Optimisation | `backbone`, `batch_size`, `num_epochs`, `lr`, `weight_decay`, `label_smoothing`, `dropout`, `loss_type` (`ce`/`bce`), `freeze_strategy` (`none`/`head_only`/`warmup`), `patience` |
+| Spectrogram | `n_mels`, `n_fft`, `hop_length`, `f_min`, `f_max`, `top_db`, `img_size` |
+| Augmentation | `p_gauss`, `p_colour_noise`, `p_shift`, `p_gain`, `p_mixup`, `p_stretch`, `p_mask`, `p_pitch`, `p_jiggle`, plus their ranges |
+| Initialisation | `init_checkpoint`: backbone weights from a previous run; the head is re-initialised |
