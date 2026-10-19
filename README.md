@@ -29,4 +29,4 @@ Parameters that can be set:
 | Optimisation | `backbone`, `batch_size`, `num_epochs`, `lr`, `weight_decay`, `label_smoothing`, `dropout`, `loss_type` (`ce`/`bce`), `freeze_strategy` (`none`/`head_only`/`warmup`), `patience` |
 | Spectrogram | `n_mels`, `n_fft`, `hop_length`, `f_min`, `f_max`, `top_db`, `img_size` |
 | Augmentation | `p_gauss`, `p_colour_noise`, `p_shift`, `p_gain`, `p_mixup`, `p_stretch`, `p_mask`, `p_pitch`, `p_jiggle`, plus their ranges |
-| Initialisation | `init_checkpoint`: backbone weights from a previous run; the head is re-initialised |
+| Initialisation | `init_checkpoint`: backbone weights from a previous run. The head is re-initialised |
