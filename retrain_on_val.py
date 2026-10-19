@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-continue training a finished checkpoint on the held-out 20% validation split.
+Continue training a finished checkpoint on the held-out 20% validation split.
 
-"python retrain_on_val.py --ckpt work/r50_best.pth --run r50_valft --epochs 2"
+"python retrain_on_val.py --ckpt work/<best_checkpoint>.pth --run <retrained model name> --epochs 2"
 
 loads the config stored in the checkpoint, rebuilds the model and the exact
 augmentation stack that run used, then trains on the validation recordings only.
-no validation is performed during these epochs, so there is no early stopping and
-no checkpoint selection - the weights after the final epoch are what gets saved.
+No validation is performed during these epochs, so there is no early stopping and
+no checkpoint selection. The weights after the final epoch are what get saved.
 """
 
 import argparse
