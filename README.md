@@ -10,6 +10,7 @@ Each training step:
 4. Colour jiggle is applied using Kornia, then the backbone: ResNet18, ResNet50 or EfficientNet-B0.
 
 NB: The dataset is not included in the repo and must be downloaded from BirdCLEF's official website!
+
 https://www.kaggle.com/competitions/birdclef-2023/data
 
 Running Experiments:
