@@ -9,7 +9,8 @@ Each training step:
 3. Spectrogram generation: Short Time Foruier Transform → time stretch → 128-band log mels (40 Hz–15 kHz) → resize spectrogram to 224×224 → per-sample normalisation → SpecAugment masking using TorchAudio → 3 channels for the model.
 4. Colour jiggle is applied using Kornia, then the backbone: ResNet18, ResNet50 or EfficientNet-B0.
 
-The dataset is included in the repo, so you don't need to download it from the official website.
+NB: The dataset is not included in the repo and must be downloaded from BirdCLEF's official website!
+https://www.kaggle.com/competitions/birdclef-2023/data
 
 Running Experiments:
 
