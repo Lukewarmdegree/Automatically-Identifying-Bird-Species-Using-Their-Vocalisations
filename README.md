@@ -44,3 +44,10 @@ Outputs:
 | `work/bad_files.txt` | Unreadable audio files (replaced with silence) |
 | `cache/train_5s.pkl`, `cache/val_5s.pkl` | Cached chunk index |
 | `results/runs.csv` | One row per run; `pvt_cmap`/`pub_cmap` are left blank for leaderboard scores |
+
+
+Submitting Trained Models to Kaggle:
+
+My submission history with all the trained models is available on my Kaggle notebook
+
+https://www.kaggle.com/code/kylenkomo/thesis-model-submission
