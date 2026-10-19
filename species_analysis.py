@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-per-class average precision for a finished checkpoint.
+Per-species average precision for a finished checkpoint.
 runs the validation split once, decomposes the cmAP into its per-species
 components, and joins them against the number of training recordings per
-species. writes a csv and, with --plot, a scatter of AP against sample count.
+species. Writes a CSV with all the per-species info.
+
+Run the script like this to get the full summary:
+    python species_analysis.py --ckpt work/<best_chekpoint>.pth
 """
 import warnings
 warnings.filterwarnings('ignore', category=UserWarning)
