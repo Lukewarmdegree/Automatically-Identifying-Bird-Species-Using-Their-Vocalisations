@@ -30,3 +30,16 @@ Parameters that can be set:
 | Spectrogram | `n_mels`, `n_fft`, `hop_length`, `f_min`, `f_max`, `top_db`, `img_size` |
 | Augmentation | `p_gauss`, `p_colour_noise`, `p_shift`, `p_gain`, `p_mixup`, `p_stretch`, `p_mask`, `p_pitch`, `p_jiggle`, plus their ranges |
 | Initialisation | `init_checkpoint`: backbone weights from a previous run. The head is re-initialised |
+
+Outputs:
+
+| Path | Contents |
+|---|---|
+| `work/<run>_config.json` | Full config, reusable with `--from` |
+| `work/<run>_best.pth` | Best-epoch checkpoint with epoch, config and val cmAP |
+| `work/<run>_weights.pth` | Best-epoch weights and config |
+| `work/<run>_history.csv` | Per-epoch train loss, val loss and val cmAP |
+| `work/<run>_spec.png` | Sanity-check spectrogram from the first batch |
+| `work/bad_files.txt` | Unreadable audio files (replaced with silence) |
+| `cache/train_5s.pkl`, `cache/val_5s.pkl` | Cached chunk index |
+| `results/runs.csv` | One row per run; `pvt_cmap`/`pub_cmap` are left blank for leaderboard scores |
