@@ -12,8 +12,11 @@ Each training step:
 The dataset is included in the repo, so you don't need to download it from the official website.
 
 Running Experiments:
+
 All experimental configurations are saved in JSON files to make it easier to build on other experiments and modify configurations.
 
 python experiments.py --run baseline (this runs a ResNet-18 without any augmentations or regularisation set. --run sets the name for the experiment)
+
 python experiments.py --run gauss_only --set p_gauss=0.5 p_gain=0.0 p_shift=0.0 (--set is used to set a value for the specified parameter. p=0 means the augmentation is turned off. Any other number indicates the probability of that augmentation being applied, and hence switches it on for that experiment.)
+
 python experiments.py --run loo_mixup --from work/full_stack_config.json --set p_mixup=0.0 (--from starts an experiment from a configuration saved as a JSON file. This makes it easier to stack augmentations on top of each other or remove augmentations from a stack.)
